@@ -8,6 +8,7 @@ const addUser = async (name,password) => {
 };
 const login = async ({name, password}) => {
     const user = await db.User.findOne({where: {name}});
+    console.log(user);
     if(!user) throw new Error("User not found");
     else
     {
